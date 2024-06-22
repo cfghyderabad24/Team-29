@@ -13,7 +13,8 @@ const router=createBrowserRouter(
       <Route path="/logintype" element={<LoginType/>}/>
       <Route path="/login/:userType" element={<Login/>}/>
       <Route path="/registration" element={<NewForm/>}/>
-        <Route path="/donate" element={<Donate/>}/>
+      <Route path="/donate" element={<Donate/>}/>
+      <Route path="/about" element={<About/>}/>
     </Route>
   )
 )

@@ -14,6 +14,7 @@ export default {
         Aleo: ["Aleo"],
       },
       colors:{
+        cream:"#FAF6F0",
         twitterColor:"#1DA1F2",
         githubColor:"#2b3137",
         linkedinColor:"#0A66C2",
