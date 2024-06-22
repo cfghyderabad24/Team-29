@@ -24,6 +24,25 @@ const NewForm = () => {
       phone: '',
       email: '',
     });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm((prevForm) => ({
+          ...prevForm,
+          [name]: value,
+        }));
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        if (form.percentage < 60) {
+          alert('You must have a minimum of 60% in 12th Standard.');
+        } else {
+          // Handle form submission
+          alert('Form submitted successfully.');
+        }
+      };
+      
     return (
         <div className="FormPage">
           <header className="App-header">
