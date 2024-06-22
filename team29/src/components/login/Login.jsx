@@ -29,7 +29,7 @@ const Login = () => {
           <label htmlFor="id">ID:</label>
           <input type="text" id="id" name="id" required />
         </div>
-        <div className="form-group">
+        <div className="form-group font-Aleo">
           <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" required />
         </div>

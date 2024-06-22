@@ -11,6 +11,7 @@ export default {
     extend: {
       fontFamily: {
         Prata: ["Prata"],
+        Aleo: ["Aleo"],
       },
       colors:{
         twitterColor:"#1DA1F2",
