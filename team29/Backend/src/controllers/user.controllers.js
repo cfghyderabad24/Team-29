@@ -5,6 +5,17 @@ import { ApiResponse } from "../utils/ApiResponse.js";
 
 
 // Add this function in user.controllers.js
+const deleteUser = asyncHandler(async (req, res) => {
+    const userId = req.params.id;
+    
+    const user = await Student.findById(userId);
+    if (!user) {
+        throw new ApiError(404, "User not found");
+    }
+
+    await user.remove();
+    return res.status(200).json(new ApiResponse(200, null, "User deleted successfully"));
+});
 
 const getUsers = asyncHandler(async (req, res) => {
     const users = await Users.find({});
