@@ -1,16 +1,18 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './Login.css';
 
 const Login = () => {
   const { userType } = useParams();
   const navigate = useNavigate();
-
   const handleSubmit = (event) => {
     event.preventDefault();
     
     // Check if the user type is 'partner-ngo'
-    if (userType === 'partner-ngo') {
+    if (userType === 'partner-ngo' ) {
       // Navigate to the registration form
       navigate('/choice');
     } else {
@@ -20,8 +22,8 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <h2>Login as {userType.replace('-', ' ')}</h2>
+    <div className="login-container" >
+      <h2>Login as {userType}</h2>
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="id">ID:</label>
@@ -31,7 +33,7 @@ const Login = () => {
           <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" required />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" >Login</button>
       </form>
     </div>
   );
