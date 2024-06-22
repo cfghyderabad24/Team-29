@@ -1,10 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {Home,Donate,LoginType,Login} from './components/Services/index.js'
+import {Home} from './components/Services/index.js'
 import Layout from './Layout.jsx'
 import { createBrowserRouter,createRoutesFromElements,Route, RouterProvider } from 'react-router-dom'
 import NewForm from './components/ScholarshipForms/NewForm.jsx'
+import Login from './components/login/Login.jsx'
+import LoginType from './components/Logintype/LoginType.jsx'
+import Donate from './components/Donate/Donate.jsx'
 
 const router=createBrowserRouter(
   createRoutesFromElements(
