@@ -20,7 +20,6 @@ const Header = () => {
             <li><a href="/about">About</a></li>
             <li><a href="/alumni">Alumni</a></li>
             <li><a href="/donate">Donate</a></li>
-            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -30,7 +29,6 @@ const Header = () => {
           <li><a href="/about">About</a></li>
           <li><a href="/alumni">Alumni</a></li>
           <li><a href="/donate">Donate</a></li>
-          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div className="navbar-end">

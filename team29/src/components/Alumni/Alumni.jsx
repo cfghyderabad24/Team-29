@@ -1,11 +1,10 @@
 // import {useState,useRef,useEffect} from "react";
 import {useState} from "react";
-import { FaMapSigns } from "react-icons/fa";
-import { BsFillTelephoneFill, BsGlobeAmericas } from "react-icons/bs";
-import { FaPaperPlane } from "react-icons/fa";
+// import { FaMapSigns } from "react-icons/fa";
+// import { BsFillTelephoneFill, BsGlobeAmericas } from "react-icons/bs";
+// import { FaPaperPlane } from "react-icons/fa";
 import axios from "axios";
-
-const FooterContact =()=>{
+const Alumni =()=>{
 
   const [name,setName]=useState("");
   const [email,setEmail]=useState("");
@@ -69,22 +68,23 @@ const FooterContact =()=>{
   ];
   const contactTab = [
     {
-      icon: <FaMapSigns className="text-4xl" />,
+    //   icon: <FaMapSigns className="text-4xl" />,
       title: "Address",
       desription: `KIIT University, Bhubaneswar, Odisha, India`,
+      pic:""
     },
     {
-      icon: <BsFillTelephoneFill className="text-4xl" />,
+      
       title: "Contact Number",
       desription: `+91 7782037428`,
     },
     {
-      icon: <FaPaperPlane className="text-4xl" />,
+      
       title: "Email Address",
       desription: `sahdebsaha909@gmail.com`,
     },
     {
-      icon: <BsGlobeAmericas className="text-4xl" />,
+      
       title: "Website",
       desription: <a href="/">Home</a>,
     },
@@ -98,7 +98,7 @@ const FooterContact =()=>{
             <p className="font-Rajdhani text-5xl font-bold">Contact Me</p>
           </div>
       {/* Cards */}
-        <div className="container mx-auto mt-[10%]">
+        {/* <div className="container mx-auto mt-[10%]">
           <div className="flex gap-5 justify-center flex-wrap h-auto lg:flex-nowrap ">
             {contactTab.map((x, index) => {
               return (
@@ -114,7 +114,44 @@ const FooterContact =()=>{
               );
             })}
           </div>
+        </div> */}
+        <div className='py-6'>
+        <div className="relative container mx-auto mt-[0%]">
+          <div className="flex gap-5 justify-center flex-wrap h-auto lg:flex-nowrap ">
+            {contactTab.slice(0, 3).map((x, index) => {
+              return (
+              <div key={index} className="card w-96 bg-base-100 shadow-xl">
+                <figure><img src={x.pic} alt="Shoes" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">{x.title}</h2>
+                    <p>{x.desription}</p>
+                    <div className="card-actions justify-end">
+                    <button className="btn btn-primary">More details</button>
+                    </div>
+                </div>
+              </div>
+              );
+            })}
+          </div>
+          <div className="relative container mx-auto mt-[5%]">
+          <div className="flex gap-5 justify-center flex-wrap h-auto lg:flex-nowrap ">
+            {contactTab.slice(3, 5).map((x, index) => {
+              return (
+              <div key={index} className="card w-96 bg-base-100 shadow-xl">
+                <figure><img src={x.pic} alt="Shoes" /></figure>
+                <div className="card-body">
+                    <h2 className="card-title">{x.title}</h2>
+                    <p>{x.desription}</p>
+                    <div className="card-actions justify-end">
+                    <button className="btn btn-primary">More Details</button>
+                    </div>
+                </div>
+              </div>
+              );
+            })}
         </div>
+      </div>
+    </div>
         </div>
         <div className={` w-[100%] h-screen flex-col flex  mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg`} >
       <div className=" container mx-auto  flex flex-wrap shadow-2xl my-20 rounded-md p-5">
@@ -154,22 +191,12 @@ const FooterContact =()=>{
             </div>
           </form>
         </div>
-        <div className="lg:w-1/2 w-full   p-4">
-          <div className="relative aspect-w-16 h-[50vw] lg:h-full aspect-h-9">
-             <iframe 
-              className="absolute rounded-md inset-0 w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.6626320403816!2d85.81352567469679!3d20.355551210561252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19091813dab8d5%3A0xa033051ccddbbcbc!2sKalinga%20Institute%20of%20Industrial%20Technology!5e0!3m2!1sen!2sin!4v1706421593896!5m2!1sen!2sin" 
-              width="800" 
-              height="600" 
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
       </div>
       </div>
       </div> 
+      </div>
     </>
   )
 }
 
-export default FooterContact;
+export default Alumni;

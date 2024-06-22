@@ -11,6 +11,8 @@ import Login from './components/login/Login.jsx'
 import LoginType from './components/Logintype/LoginType.jsx'
 import Donate from './components/Donate/Donate.jsx'
 import About from './components/About/About.jsx'
+import Alumni from './components/Alumni/Alumni.jsx'
+import UserTable from './components/UserTable.jsx'
 
 const router=createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +25,8 @@ const router=createBrowserRouter(
       <Route path="/donate" element={<Donate/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/choice" element={<Choice/>}/>
+      <Route path="/alumni" element={<Alumni/>}/>
+      <Route path="/st" element={<UserTable/>}/>
     </Route>
   )
 )
