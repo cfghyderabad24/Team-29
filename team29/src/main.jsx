@@ -8,6 +8,7 @@ import NewForm from './components/ScholarshipForms/NewForm.jsx'
 import Login from './components/login/Login.jsx'
 import LoginType from './components/Logintype/LoginType.jsx'
 import Donate from './components/Donate/Donate.jsx'
+import About from './components/About/About.jsx'
 
 const router=createBrowserRouter(
   createRoutesFromElements(
@@ -16,7 +17,8 @@ const router=createBrowserRouter(
       <Route path="/logintype" element={<LoginType/>}/>
       <Route path="/login/:userType" element={<Login/>}/>
       <Route path="/registration" element={<NewForm/>}/>
-        <Route path="/donate" element={<Donate/>}/>
+      <Route path="/donate" element={<Donate/>}/>
+      <Route path="/about" element={<About/>}/>
     </Route>
   )
 )
