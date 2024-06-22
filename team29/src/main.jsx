@@ -1,11 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {Home} from './components/Services/index.js'
+import {Home,Donate,LoginType,Login} from './components/Services/index.js'
 import Layout from './Layout.jsx'
-import LoginType from './components/Logintype/LoginType.jsx'
 import { createBrowserRouter,createRoutesFromElements,Route, RouterProvider } from 'react-router-dom'
-import Login from './components/login/Login.jsx'
 import NewForm from './components/ScholarshipForms/NewForm.jsx'
 
 const router=createBrowserRouter(
@@ -15,8 +13,7 @@ const router=createBrowserRouter(
       <Route path="/logintype" element={<LoginType/>}/>
       <Route path="/login/:userType" element={<Login/>}/>
       <Route path="/registration" element={<NewForm/>}/>
-      {/*<Route path="footer-KnowTheTeam" element={<FooterKnowTheTeam/>}/>
-      <Route path="footer-reference" element={<FooterReference/>}/> */}
+        <Route path="/donate" element={<Donate/>}/>
     </Route>
   )
 )
