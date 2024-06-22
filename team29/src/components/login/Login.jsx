@@ -1,14 +1,28 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
   const { userType } = useParams();
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+    // Check if the user type is 'partner-ngo'
+    if (userType === 'partner-ngo') {
+      // Navigate to the registration form
+      navigate('/registration');
+    } else {
+      // Handle other user types or show an error message
+      alert('Login successful');
+    }
+  };
 
   return (
     <div className="login-container">
       <h2>Login as {userType.replace('-', ' ')}</h2>
-      <form className="login-form">
+      <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="id">ID:</label>
           <input type="text" id="id" name="id" required />
