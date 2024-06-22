@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Assuming you have some CSS for the header
 
 const Header = () => {
@@ -31,7 +31,7 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <button className="btn font-Prata" onClick={handleLoginClick}>Login</button>
+        <button className="text-white font-bold p-4 btn font-Prata bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 " onClick={handleLoginClick}>Login</button>
       </div>
     </div>
   );

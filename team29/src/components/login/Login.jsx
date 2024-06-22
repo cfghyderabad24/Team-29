@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { useParams } from 'react-router-dom';
 import './Login.css';
 
@@ -7,13 +7,13 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Login as {userType.replace('-', ' ')}</h2>
-      <form className="login-form">
-        <div className="form-group">
+      <h2 className='font-Aleo font-bold text-xl'>Login as {userType.replace('-', ' ')}</h2>
+      <form className="login-form font-Aleo">
+        <div className="form-group font-Aleo">
           <label htmlFor="id">ID:</label>
           <input type="text" id="id" name="id" required />
         </div>
-        <div className="form-group">
+        <div className="form-group font-Aleo">
           <label htmlFor="password">Password:</label>
           <input type="password" id="password" name="password" required />
         </div>
