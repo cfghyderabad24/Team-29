@@ -1,5 +1,6 @@
 import {Schema, model} from "mongoose"
 
+
 const userSchema=new Schema({
     name:{
         type:String,
@@ -65,6 +66,12 @@ const userSchema=new Schema({
         type:Number,
         required:true,
     },
+    mail:{
+        type:String,
+        required:true,
+    },
+    
+
 },{timestamps:true})
 
 
