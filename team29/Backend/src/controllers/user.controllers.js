@@ -13,7 +13,7 @@ const registerUser = asyncHandler( async (req, res) => {
         twelve, income, father_name, 
         father_occ, mother_name, mother_occ, 
         edu_stream, college_name, college_id, 
-        college_fee, grad, add, ph} = req.body
+        college_fee, grad, add, ph, mail} = req.body
     //console.log("email: ", email);
 
     if (
@@ -21,7 +21,7 @@ const registerUser = asyncHandler( async (req, res) => {
             twelve, income, father_name, 
             father_occ, mother_name, mother_occ, 
             edu_stream, college_name, college_id, 
-            college_fee, grad, add, ph].some((field) => field?.trim() === "")
+            college_fee, grad, add, ph, mail].some((field) => field?.trim() === "")
     ) {
         throw new ApiError(400, "All fields are required")
     }
@@ -31,7 +31,7 @@ const registerUser = asyncHandler( async (req, res) => {
         twelve, income, father_name, 
         father_occ, mother_name, mother_occ, 
         edu_stream, college_name, college_id, 
-        college_fee, grad, add, ph
+        college_fee, grad, add, ph, mail
     })
 
     return res.status(201).json(
