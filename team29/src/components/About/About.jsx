@@ -25,7 +25,7 @@ const About = () => {
       <Loader/>
       ):(
       <div className=''>
-        <div className="mt-[5.3%] absolute top-0 left-0 w-[100%] h-[100%] bg-black/40">
+        <div className="mt-[8%] absolute top-0 left-0 w-[100%] h-[100%] bg-black/40">
           </div>
           <div className=" m-0 p-0 w-[100%] h-[100vh] ">
             <video

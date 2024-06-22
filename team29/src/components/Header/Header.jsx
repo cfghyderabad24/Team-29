@@ -1,6 +1,6 @@
 // import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Assuming you have some CSS for the header
-
+import pic5 from "../../Assets/pic5.png"
 const Header = () => {
   const navigate = useNavigate();
 
@@ -9,8 +9,11 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 bg-white">
       <div className="navbar-start">
+      <div className="image-container">
+        <img src={pic5} alt="logo" height="50%" width="50%" />
+        </div>
         <div className="dropdown">
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-Prata">
             <li><a href="/">Home</a></li>
