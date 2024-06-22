@@ -34,7 +34,7 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <button className="text-white font-bold p-4 btn font-Prata bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 " onClick={handleLoginClick}>Login</button>
+        <button className="text-white font-bold p-4 btn font-Prata bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 w-auto " onClick={handleLoginClick}>Login</button>
       </div>
     </div>
   );
