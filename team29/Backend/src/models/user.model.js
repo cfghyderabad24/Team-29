@@ -65,6 +65,10 @@ const userSchema=new Schema({
         type:Number,
         required:true,
     },
+    mail:{
+        type:String,
+        required:true,
+    },
 },{timestamps:true})
 
 
