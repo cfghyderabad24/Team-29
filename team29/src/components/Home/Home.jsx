@@ -7,12 +7,22 @@ import pic2 from "../../Assets/pic2.png"
 import pic3 from "../../Assets/pic3.png"
 import pic4 from "../../Assets/pic4.png"
 import pic1 from "../../Assets/pic1.png"
+import pic6 from "../../Assets/pic6.jpeg"
+import pic7 from "../../Assets/pic7.jpeg"
+import pic8 from "../../Assets/pic8.jpeg"
+import pic9 from "../../Assets/pic9.jpeg"
+import pic10 from "../../Assets/pic10.jpeg"
 
 
 const images = [
   { url: pic2 },
   { url: pic3 },
   { url: pic4 }
+];
+const stories = [
+  { url: pic8 },
+  { url: pic9 },
+  { url: pic10 }
 ];
 const contactTab = [
   {
@@ -50,7 +60,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <h1 className="p-2  mt-[10px] flex font-Prata justify-center text-4xl align-center font-bold">Welcome to St. Bhatevara!</h1>
+        <h1 className="p-2  mt-[10px] flex font-Prata justify-center text-4xl align-center font-bold">Welcome to St. Bhatevara Foundation!</h1>
         </div>
       <SimpleImageSlider
         width="100%"
@@ -123,7 +133,48 @@ const Home = () => {
       </div>
     </div>
     </div>
-    </div>
+      <p className="text-4xl text-bold mt-15rem font-Aleo font-bold p-8">Trustees</p>
+    <div className="flex gap-5 justify-center flex-wrap h-auto lg:flex-nowrap mt-15rem">
+    <div className="card lg:card-side bg-base-100 shadow-xl">
+  <figure><img src={pic6} alt="Album" className='w-[70%]'/></figure>
+  <div className="card-body font-Aleo">
+    <h2 className="card-title">Mr. S. T. Bhatevara Chairman, Foundation Trustee</h2>
+    <p>BE (ELECTICAL) </p>
+     <p> FOUNDER OF SEVERAL MANUFACTURING COMPANIES</p>
+     <p> 1.PAINTS INDUSTRY</p>
+     <p> 2.HEATING ELEMENTS</p>
+     <p> 3.ENGINE DIVISION </p>
+  </div>
+</div>
+<div className="card lg:card-side bg-base-100 shadow-xl">
+  <figure><img src={pic7} className='w-[70%]' alt="Album h-50% w-50%"/></figure>
+  <div className="card-body font-Aleo">
+    <h2 className="card-title">Rosy Bhatevara, Managing Trustee</h2>
+    <p>B.COM (Rank Holder In Pune University.)</p>
+    <p>Cost  Accountant (Inst. Of Cost Accountants Of India ) </p>
+    <p>Director- M/s Super Paints Pvt. Ltd.</p>
+    <p>ERP Consultant to Several Companies</p>
+    <p>Visiting Faculty to many Management Institutes.</p>
+  </div>
+</div>
+</div>
+<div>
+<div className='flex justify-center font-Aleo text-4xl mt-[3rem] font-bold'>Meet our Alumni</div>
+<div className="mt-[3rem] flex justify-center">
+<SimpleImageSlider
+        width="75%"
+        height="50%"
+        images={stories}
+        showBullets={true}
+        showNavs={true}
+        className=""
+      />
+</div>
+</div>
+<div className="card lg:card-side bg-base-100 shadow-xl flex justify-center mt-[23rem]">
+  <p>Copyright ©️ 2023 St.Bhatevara India. All Rights Reserved</p>
+</div>
+</div>
   );
 }
 

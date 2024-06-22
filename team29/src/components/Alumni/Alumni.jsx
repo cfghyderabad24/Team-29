@@ -4,8 +4,7 @@ import { FaMapSigns } from "react-icons/fa";
 import { BsFillTelephoneFill, BsGlobeAmericas } from "react-icons/bs";
 import { FaPaperPlane } from "react-icons/fa";
 import axios from "axios";
-
-const FooterContact =()=>{
+const Alumni =()=>{
 
   const [name,setName]=useState("");
   const [email,setEmail]=useState("");
@@ -172,4 +171,4 @@ const FooterContact =()=>{
   )
 }
 
-export default FooterContact;
+export default Alumni;
