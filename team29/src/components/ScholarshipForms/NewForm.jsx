@@ -45,10 +45,10 @@ const NewForm = () => {
       };
       
     return (
-        <div className="FormPage">
+        <div className="ml-[25%] FormPage w-[50%]">
           <header className="App-header">
             <h1>Student Scholarship Form</h1>
-              <div className="form-container">
+              <div className="form-container w-[70%]">
                 <form onSubmit={handleSubmit} className="form">
                   <div>
                     <label htmlFor="name">Name:</label>

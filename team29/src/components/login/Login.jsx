@@ -14,7 +14,7 @@ const Login = () => {
     // Check if the user type is 'partner-ngo'
     if (userType === 'partner-ngo' ) {
       // Navigate to the registration form
-      navigate('/registration');
+      navigate('/choice');
     } else {
       // Handle other user types or show an error message
       alert('Login successful');
