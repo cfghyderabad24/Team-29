@@ -1,10 +1,11 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
 import "./NewForm.css"
+import { useState } from 'react';
 
 const NewForm = () => {
     const location = useLocation();
-    const { option } = location.state || {};
+    //const { option } = location.state || {};
     const [form, setForm] = useState({
       name: '',
       age: '',
@@ -24,6 +25,8 @@ const NewForm = () => {
       phone: '',
       email: '',
     });
+    const handleSubmit = ()=>{}
+    const handleChange=()=>{}
     return (
         <div className="FormPage">
           <header className="App-header">
