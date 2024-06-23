@@ -44,7 +44,7 @@ boxShadow: " 0px 10px 20px 0px #8280b3",
 }}>
   <div className="content-title">
   <FaUsers/>
-  <div className='content-text'>Tasks</div>
+  <div className='content-text'>Alumni</div>
   </div>
   <div className='count'>70</div>
  
@@ -56,9 +56,9 @@ boxShadow: " 0px 10px 20px 0px #8280b3",
 }}>
   <div className="content-title">
   <FaUsers/>
-  <div className='content-text'>Benificaries</div>
+  <div className='content-text'>Courses</div>
   </div>
-  <div className='count'>1234</div>
+  <div className='count'>4</div>
  
 </div>
 </div>

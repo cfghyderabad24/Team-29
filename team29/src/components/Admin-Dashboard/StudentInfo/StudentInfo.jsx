@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react'
+/*import React, { useContext, useState } from 'react'
 import { AppContext } from '../../../contexts/AppProvider'
-import Button from 'react-bootstrap/esm/Button';
+import Button from 'react-bootstrap/Button';
 import SingleStudent from '../SingleStudent/SingleStudent';
 import { useNavigate } from 'react-router-dom';
 import { ImCross } from "react-icons/im";
@@ -46,4 +46,4 @@ function StudentInfo() {
   )
 }
 
-export default StudentInfo
+export default StudentInfo*/

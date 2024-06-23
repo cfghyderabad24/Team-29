@@ -1,14 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {Home} from './components/Services/index.js'
+
 import Layout from './Layout.jsx'
 import { createBrowserRouter,createRoutesFromElements,Route, RouterProvider } from 'react-router-dom'
 
 import {Home} from "./components/Services/index.js"
 import AdminDashboard from './components/Admin-Dashboard/AdminDashboard.jsx'
 import AppProvider from './contexts/AppProvider.jsx'
-import StudentInfo from './components/Admin-Dashboard/StudentInfo/StudentInfo.jsx'
+
 import SingleStudent from './components/Admin-Dashboard/SingleStudent/SingleStudent.jsx'
 import NewForm from './components/ScholarshipForms/NewForm.jsx'
 import RegisteredStudent from './components/ScholarshipForms/RegisteredStudent.jsx'
@@ -25,7 +25,7 @@ const router=createBrowserRouter(
     <Route path="/" element={<Layout />} >
       <Route path="" element={<Home/>}/>
       <Route path='/admin' element={<AdminDashboard/>}></Route>
-      <Route path='/userVerify' element={<StudentInfo/>}></Route>
+
       <Route path='/userVerfication/:name' element={<SingleStudent/>}/>
      
       {/* <Route path="about" element={<About/>}/>
@@ -41,7 +41,8 @@ const router=createBrowserRouter(
       <Route path="/about" element={<About/>}/>
       <Route path="/choice" element={<Choice/>}/>
       <Route path="/alumni" element={<Alumni/>}/>
-      <Route path="/st" element={<UserTable/>}/>
+      <Route path="/userinfo" element={<UserTable/>}/>
+      
     </Route>
   )
 )

@@ -11,7 +11,6 @@ function Table() {
       }
   return (
     <div className='admin-table'>
-        <div className="heading">Student Details...</div>
         
     <div className="table-heading">
         <div className="content">Sno</div>
