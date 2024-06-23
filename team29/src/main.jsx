@@ -27,8 +27,12 @@ const router=createBrowserRouter(
       <Route path="/about" element={<About/>}/>
       <Route path="/choice" element={<Choice/>}/>
       <Route path="/alumni" element={<Alumni/>}/>
+<<<<<<< HEAD
       <Route path="/st" element={<UserTable/>}/>
       <Route path="/error" element={<Error/>}/>
+=======
+      <Route path="/students" element={<UserTable/>}/>
+>>>>>>> origin/main
     </Route>
   )
 )

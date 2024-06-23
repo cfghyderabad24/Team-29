@@ -16,6 +16,12 @@ const Login = () => {
       // Navigate to the registration form
       navigate('/choice');
     } 
+    if(userType==='volunteer'){
+      navigate('/students')
+    }
+    if(userType===''){
+
+    }
     else {
       // Handle other user types or show an error message
       alert('Login successful');
