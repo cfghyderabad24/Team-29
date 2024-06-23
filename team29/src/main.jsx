@@ -19,6 +19,7 @@ import Donate from './components/Donate/Donate.jsx'
 import About from './components/About/About.jsx'
 import Alumni from './components/Alumni/Alumni.jsx'
 import UserTable from './components/UserTable.jsx'
+import Error from './components/Error/Error.jsx'
 
 const router=createBrowserRouter(
   createRoutesFromElements(
@@ -43,6 +44,8 @@ const router=createBrowserRouter(
       <Route path="/alumni" element={<Alumni/>}/>
       <Route path="/userinfo" element={<UserTable/>}/>
       
+      <Route path="/students" element={<UserTable/>}/>
+      <Route path="/error" element={<Error/>}/>
     </Route>
   )
 )

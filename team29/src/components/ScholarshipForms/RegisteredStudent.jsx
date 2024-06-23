@@ -1,17 +1,18 @@
 // import React from 'react'
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 import "./NewForm.css"
 import { useState } from 'react';
-
+import axios from "axios";
 const RegisteredStudent = () => {
-    const location = useLocation();
+    // const location = useLocation();
     //const { option } = location.state || {};
     const [form, setForm] = useState({
       name: '',
       age: '',
       gender: '',
-      yearofgrad: '',
       email: '',
+      amt:'',
+      marks:'',
     });
 
     const handleChange = (e) => {
@@ -22,13 +23,27 @@ const RegisteredStudent = () => {
         }));
       };
     
-      const handleSubmit = (e) => {
+      const handleSubmit = async(e) => {
         e.preventDefault();
         if (form.percentage < 60) {
           alert('You must have a minimum of 60% in 12th Standard.');
         } else {
           // Handle form submission
           alert('Form submitted successfully.');
+        }
+        try {
+          const response = await axios.post('http://localhost:8000/api/v1/users/registered', {
+            name: form.name,
+            age: form.age,
+            gender: form.gender,
+            mail: form.email,
+            amt: form.amt,
+            marks: form.marks
+          });
+          console.log(response)
+          alert('Form submitted successfully.');
+        } catch (error) {
+          console.error('Error sending data to backend:', error);
         }
       };
       
@@ -83,6 +98,28 @@ const RegisteredStudent = () => {
                       id="email"
                       name="email"
                       value={form.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className='font-Aleo'>
+                    <label htmlFor="ScholarshipAmt">Last Scholarship Amount:</label>
+                    <input
+                      type="text"
+                      id="amt"
+                      name="amt"
+                      value={form.amt}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className='font-Aleo'>
+                    <label htmlFor="Marks">Marks / CGPA:</label>
+                    <input
+                      type="text"
+                      id="marks"
+                      name="marks"
+                      value={form.marks}
                       onChange={handleChange}
                       required
                     />

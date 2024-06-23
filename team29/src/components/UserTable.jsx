@@ -31,6 +31,21 @@ const UserTable = () => {
     setVisibleStudents(visibleStudents.filter(student => student._id !== id));
   };
 
+  const handleDelete = async (id) => {
+    try {
+      const response = await axios.delete(`http://localhost:8000/api/v1/users/${id}`);
+      if (response.data.success) {
+        setStudents(students.filter(student => student._id !== id));
+        setVisibleStudents(visibleStudents.filter(student => student._id !== id));
+        alert('User deleted successfully.');
+      } else {
+        console.error('Failed to delete user:', response.data.message);
+      }
+    } catch (error) {
+      console.error('Error deleting user:', error);
+    }
+  };
+
   return (
     <div>
       <h1>Student Data</h1>
@@ -42,23 +57,30 @@ const UserTable = () => {
             <th>College Name</th>
             <th>Income</th>
             <th>Remove</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          {visibleStudents.map((student) => (
-            <tr key={student._id}>
-              <td>{student.name}</td>
-              <td>{student.edu_stream}</td>
-              <td>{student.college_name}</td>
-              <td>{student.income}</td>
-              <td>
-                <ImCross onClick={() => hideStudent(student._id)} style={{ cursor: 'pointer' }} />
-              </td>
-              <td>
-                <button className='interview-btn'>Interview</button>
-              </td>
+          {visibleStudents.length > 0 ? (
+            visibleStudents.map((student) => (
+              <tr key={student._id}>
+                <td>{student.name}</td>
+                <td>{student.edu_stream}</td>
+                <td>{student.college_name}</td>
+                <td>{student.income}</td>
+                <td>
+                  <ImCross onClick={() => hideStudent(student._id)} style={{ cursor: 'pointer' }} />
+                </td>
+                <td>
+                  <button className='interview-btn' onClick={() => handleDelete(student._id)}>Interview</button>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="6">No data available</td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
