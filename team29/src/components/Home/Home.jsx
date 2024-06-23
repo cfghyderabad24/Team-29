@@ -3,15 +3,15 @@
 import './Home.css';
 // import React, { useState } from "react";
 import SimpleImageSlider from "react-simple-image-slider";
-import pic2 from "../../Assets/pic2.png"
-import pic3 from "../../Assets/pic3.png"
-import pic4 from "../../Assets/pic4.png"
-import pic1 from "../../Assets/pic1.png"
-import pic6 from "../../Assets/pic6.jpeg"
-import pic7 from "../../Assets/pic7.jpeg"
-import pic8 from "../../Assets/pic8.jpeg"
-import pic9 from "../../Assets/pic9.jpeg"
-import pic10 from "../../Assets/pic10.jpeg"
+import pic2 from "../../assets/pic2.png"
+import pic3 from "../../assets/pic3.png"
+import pic4 from "../../assets/pic4.png"
+import pic1 from "../../assets/pic1.png"
+import pic6 from "../../assets/pic6.jpeg"
+import pic7 from "../../assets/pic7.jpeg"
+import pic8 from "../../assets/pic8.jpeg"
+import pic9 from "../../assets/pic9.jpeg"
+import pic10 from "../../assets/pic10.jpeg"
 
 
 const images = [
