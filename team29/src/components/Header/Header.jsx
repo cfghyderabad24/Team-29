@@ -1,6 +1,6 @@
 // import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Assuming you have some CSS for the header
-import pic5 from "../../Assets/pic5.png"
+import pic5 from "../../assets/pic2.png"
 const Header = () => {
   const navigate = useNavigate();
 
