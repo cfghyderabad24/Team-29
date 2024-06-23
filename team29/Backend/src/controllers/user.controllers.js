@@ -8,7 +8,7 @@ import { ApiResponse } from "../utils/ApiResponse.js";
 const deleteUser = asyncHandler(async (req, res) => {
     const userId = req.params.id;
     
-    const user = await Student.findById(userId);
+    const user = '667741f1d622b5647af8d85b';
     if (!user) {
         throw new ApiError(404, "User not found");
     }
@@ -73,4 +73,4 @@ const registerUser = asyncHandler( async (req, res) => {
 
 })
 
-export { registerUser, getUsers };
+export { registerUser, getUsers ,deleteUser};
