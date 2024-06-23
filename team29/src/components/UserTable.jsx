@@ -31,24 +31,9 @@ const UserTable = () => {
     setVisibleStudents(visibleStudents.filter(student => student._id !== id));
   };
 
-  const handleDelete = async (id) => {
-    try {
-      const response = await axios.delete(`http://localhost:8000/api/v1/users/${id}`);
-      if (response.data.success) {
-        setStudents(students.filter(student => student._id !== id));
-        setVisibleStudents(visibleStudents.filter(student => student._id !== id));
-        alert('User deleted successfully.');
-      } else {
-        console.error('Failed to delete user:', response.data.message);
-      }
-    } catch (error) {
-      console.error('Error deleting user:', error);
-    }
-  };
-
   return (
     <div>
-      <h1>Student Data</h1>
+      <h1 className='flex justify-center font-Aleo text-3xl mt-[5px]'>Student Data</h1>
       <table>
         <thead>
           <tr>
@@ -72,7 +57,9 @@ const UserTable = () => {
                   <ImCross onClick={() => hideStudent(student._id)} style={{ cursor: 'pointer' }} />
                 </td>
                 <td>
-                  <button className='interview-btn' onClick={() => handleDelete(student._id)}>Interview</button>
+                  <a href="https://live-interview-two.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <button className='interview-btn'>Interview</button>
+                  </a>
                 </td>
               </tr>
             ))
