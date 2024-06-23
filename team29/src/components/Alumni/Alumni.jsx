@@ -99,9 +99,10 @@ const Alumni = () => {
             </div>
           </div>
         </div>
+        <div className="flex justify-center">
         <div className="flex justify-center items-center h-full">
           <div className="container mx-auto flex flex-wrap shadow-2xl rounded-md p-5">
-            <div className="lg:w-1/2 w-full p-4">
+            <div className="lg:[100%] w-full p-4">
               <form className="shadow-lg rounded-md px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
                 <div className="flex flex-col items-center">
                   {formTab.map((x, index) => {
@@ -138,6 +139,7 @@ const Alumni = () => {
               </form>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </>
