@@ -1,6 +1,6 @@
 // import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Assuming you have some CSS for the header
-import pic5 from "../../assets/pic2.png"
+import pic5 from "../../Assets/pic5.png"
 const Header = () => {
   const navigate = useNavigate();
 
@@ -9,9 +9,9 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 bg-white">
-      <div className="navbar-start">
-      <div className="image-container">
+    <div className="navbar bg-base-100 bg-white flex justify-between">
+      <div className="">
+      <div className="image-container ml-[5rem]">
         <img src={pic5} alt="logo" height="50%" width="50%" />
         </div>
         <div className="dropdown">
@@ -20,6 +20,7 @@ const Header = () => {
             <li><a href="/about">About</a></li>
             <li><a href="/alumni">Alumni</a></li>
             <li><a href="/donate">Donate</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -29,10 +30,11 @@ const Header = () => {
           <li><a href="/about">About</a></li>
           <li><a href="/alumni">Alumni</a></li>
           <li><a href="/donate">Donate</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div className="navbar-end">
-        <button className="text-white font-bold p-4 btn font-Prata bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 w-auto " onClick={handleLoginClick}>Login</button>
+        <button className="text-white font-bold p-3 btn font-Prata bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 w-auto " onClick={handleLoginClick}>Login</button>
       </div>
     </div>
   );

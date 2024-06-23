@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-import videoBG from '../../assets/videoBG.mp4'
+import videoBG from '../../Assets/videoBG.mp4'
 import { useSpring, animated } from '@react-spring/web';
 import Loader from '../Loader/Loader';
 

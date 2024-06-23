@@ -19,8 +19,8 @@ const Login = () => {
     if(userType==='volunteer'){
       navigate('/students')
     }
-    if(userType===''){
-
+    if(userType==='foundation-officer'){
+      navigate('/admin')
     }
     else {
       // Handle other user types or show an error message
